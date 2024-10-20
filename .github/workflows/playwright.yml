@@ -5,7 +5,8 @@ on:
   pull_request:
     branches: [ main, master ]
 permissions:
-   id-token: write
+  pages: write 
+  id-token: write
 jobs:
   test:
     timeout-minutes: 60
@@ -34,4 +35,4 @@ jobs:
        path: playwright-report
     - name: Deploy Artifact to Github Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4
