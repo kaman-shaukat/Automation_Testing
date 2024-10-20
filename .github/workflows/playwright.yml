@@ -37,9 +37,9 @@ jobs:
     - name: Deploy Artifact to Github Pages
       id: deployment
       uses: actions/deploy-pages@v4
-      with:
-          pages: my-github-pages-site
-          path: playwright-report/
+      #with:
+      #    pages: my-github-pages-site
+      #    path: playwright-report/
     - name: Deploy to the github-pages environment
       run: echo {page_url} = ${{ steps.deployment.outputs.page_url}}
     environment:
