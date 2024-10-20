@@ -30,9 +30,12 @@ jobs:
     - name: Setup Github Pages
       uses: actions/configure-pages@v2
     - name: Upload Artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
-       path: playwright-report
+       path: playwright-report/
     - name: Deploy Artifact to Github Pages
       id: deployment
       uses: actions/deploy-pages@v4
+      with:
+          pages: my-github-pages-site
+          path: playwright-report/
