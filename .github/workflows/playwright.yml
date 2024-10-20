@@ -26,7 +26,7 @@ jobs:
         path: playwright-report/
         retention-days: 30
     - name: Setup Github Pages
-      uses: actions/configure-pages@v2
+      uses: actions/configure-pages
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v3
       with:
