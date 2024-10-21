@@ -45,17 +45,6 @@ jobs:
 
     - name: Deploy to the github-pages environment
       run: echo {page_url} = ${{ steps.deployment.outputs.page_url}}
-    - name: Send mail
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        username: ${{ secrets.MAIL_USERNAME }}   # Optional (recommended) mail server username
-        password: ${{ secrets.MAIL_PASSWORD }}   # Optional (recommended) mail server password
-        subject: Github Actions job result       # Required mail subject
-        to: ${{ secrets.MAIL_TO }}               # Required recipients' addresses
-        from: ${{ secrets.MAIL_FROM }}           # Required sender full name (address can be skipped)
-        body:  >
-        Test results are available at: ${{ steps.deployment.outputs.page_url }} # Optional plain body
+      
      
 
