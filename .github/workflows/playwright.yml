@@ -54,15 +54,17 @@ jobs:
                 secure: true
                 username: ${{ secrets.MAIL_USER_EMAIL }}
                 password: ${{ secrets.MAIL_USER_PASSWORD }}
-                subject: Playwright Automation Execution Results
+                subject: Playwright Test Results for Latest Build
                 to: ${{ secrets.MAIL_TO }}
                 from: ${{ secrets.MAIL_FROM }}
                 body: Build job of ${{github.repository}} completed successfully!
                 html_body: |
                   <html>
                     <body>
-                        <p>The playwright automation test job <strong>${{ github.repository }}</strong> completed successfully!</p>
-                        <p>You can view the automation results deployed site at: <a href="${{ steps.deployment.outputs.page_url }}">${{ steps.deployment.outputs.page_url }}</a></p>
+                        <p>Hi Team,</p>
+                        <p>The latest build of <strong>${{ github.repository }}</strong> has completed its Playwright test execution.</p>
+                        <p>All tests were executed automatically via the GitHub Actions pipeline. Please review the test report to address any failures.</p>
+                        <p><a href="${{ steps.deployment.outputs.page_url }}">Click here to view the detailed test report</a></p>
                     </body>
                   </html>
                 ignore_cert: false
