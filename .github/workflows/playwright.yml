@@ -54,14 +54,15 @@ jobs:
                 secure: true
                 username: ${{ secrets.MAIL_USER_EMAIL }}
                 password: ${{ secrets.MAIL_USER_PASSWORD }}
-                subject: Test Email
+                subject: Playwright Automation Execution Results
                 to: ${{ secrets.MAIL_TO }}
                 from: ${{ secrets.MAIL_FROM }}
                 body: Build job of ${{github.repository}} completed successfully!
                 html_body: |
                   <html>
                     <body>
-                        this is a text email
+                        <p>The playwright automation test job <strong>${{ github.repository }}</strong> completed successfully!</p>
+                        <p>You can view the automation results deployed site at: <a href="${{ steps.deployment.outputs.page_url }}">${{ steps.deployment.outputs.page_url }}</a></p>
                     </body>
                   </html>
                 ignore_cert: false
