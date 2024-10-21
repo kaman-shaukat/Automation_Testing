@@ -31,7 +31,7 @@ jobs:
     - name: Deploy playwright-report
       uses: peaceiris/actions-gh-pages@v4
       with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAT }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./playwright-report
 
