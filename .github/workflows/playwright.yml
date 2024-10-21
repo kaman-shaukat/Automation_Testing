@@ -30,7 +30,8 @@ jobs:
         path: playwright-report/index.html
     - name: Deploy playwright-report
       uses: peaceiris/actions-gh-pages@v4
-      with:
+      env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: playwright-report/
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: playwright-report/
 
