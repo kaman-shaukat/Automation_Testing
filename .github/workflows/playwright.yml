@@ -28,7 +28,8 @@ jobs:
       with:
         name: playwright-report
         path: playwright-report/index.html
-    - name: Deploy playwright-report
+    - name: Deploy adn publish playwright HTML report
+      if: always() # We want this to always run, even if test fail prior to this step running
       uses: peaceiris/actions-gh-pages@v4
       with:
           github_token: ${{ secrets.GH_PAT }}
