@@ -57,7 +57,7 @@ jobs:
                         <p>Hi Team,</p>
                         <p>The latest build of <strong>${{ github.repository }}</strong> has completed its Playwright test execution.</p>
                         <p>All tests were executed automatically via the GitHub Actions pipeline. Please review the test report to address any failures.</p>
-                        <p><a href="${{ steps.deployment.outputs.page_url }}">Click here to view the detailed test report</a></p>
+                        <p><a href="{page_url}">Click here to view the detailed test report</a></p>
                     </body>
                   </html>
                 ignore_cert: false
