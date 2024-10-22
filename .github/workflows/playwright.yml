@@ -37,7 +37,8 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: playwright-report/
     - name: Get GitHub Pages URL
-      run: echo {page_url} = ${{ steps.deployment.outputs.page_url}}
+      run: echo "{page_url} = https://kaman-shaukat.github.io/Automation_Testing/"
+#      run: echo {page_url} = ${{ steps.deployment.outputs.page_url}}
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
