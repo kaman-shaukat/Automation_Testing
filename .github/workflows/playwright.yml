@@ -39,6 +39,11 @@ jobs:
     - name: Get GitHub Pages URL
       run: echo "{page_url} = https://kaman-shaukat.github.io/Automation_Testing/">> $GITHUB_ENV
 #      run: echo {page_url} = ${{ steps.deployment.outputs.page_url}}
+    - name: Debug page_url
+      run: |
+        echo "Page URL is: $page_url"
+      env:
+        page_url: ${{ env.page_url }} 
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
