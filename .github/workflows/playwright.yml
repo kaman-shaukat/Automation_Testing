@@ -33,5 +33,5 @@ jobs:
       with:
           github_token: ${{ secrets.GH_PAT }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./playwright-report
+          PUBLISH_DIR: playwright-report/
 
