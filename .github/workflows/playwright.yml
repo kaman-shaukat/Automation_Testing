@@ -37,13 +37,8 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: playwright-report/
     - name: Get GitHub Pages URL
-      run: echo "{page_url} = https://kaman-shaukat.github.io/Automation_Testing/">> $GITHUB_ENV
 #      run: echo {page_url} = ${{ steps.deployment.outputs.page_url}}
-    - name: Debug page_url
-      run: |
-        echo "Page URL is: $page_url"
-      env:
-        page_url: ${{ env.page_url }} 
+ 
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
@@ -62,7 +57,7 @@ jobs:
                         <p>Hi Team,</p>
                         <p>The latest build of <strong>${{ github.repository }}</strong> has completed its Playwright test execution.</p>
                         <p>All tests were executed automatically via the GitHub Actions pipeline. Please review the test report to address any failures.</p>
-                        <p><a href="${{ env.page_url }}">Click here to view the detailed test report</a></p>
+                        <p><a href="${{ secrets.PAGE_URL }}">Click here to view the detailed test report</a></p>
                     </body>
                   </html>
                 ignore_cert: false
