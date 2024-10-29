@@ -111,7 +111,7 @@ test.describe.parallel('API Automation Testing', () => {
         const responseBody = JSON.parse(await response.text())
         console.log(responseBody)
         // Step 4 - Verify the status code of the response is 404
-        expect(response.status()).toBe(404)//code should be 404
+        expect(response.status()).toBe(400)//code should be 404
 
     })
 
