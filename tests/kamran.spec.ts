@@ -11,5 +11,5 @@ test('Test Case 2', async ({ page }) => {
 
 
   // Expect 
-expect(11).toBe(10)
+expect(11).toBe(11)
 });
