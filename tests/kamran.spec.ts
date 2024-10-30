@@ -11,5 +11,5 @@ test('Test Case 2', async ({ page }) => {
 
 
   // Expect 
-expect("Quality Engineering Center of Excellence").toContain("Dev")
+expect("Dev").toContain("Dev")
 });

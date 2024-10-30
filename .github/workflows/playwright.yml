@@ -55,7 +55,7 @@ jobs:
                 html_body: |
                   <html>
                     <body>
-                        <p>Hi Team Mujeeb and Umair,</p>
+                        <p>Hi Dev team</p>
                         <p>The latest build of <strong>${{ github.repository }}</strong> has completed its Playwright test execution.</p>
                         <p>All tests were executed automatically via the GitHub Actions pipeline. Please review the test report to address any failures.</p>
                         <p><a href="${{ secrets.PAGE_URL }}">Click here to view the detailed test report</a></p>
